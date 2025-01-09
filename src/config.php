@@ -4,10 +4,10 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 
-$host = 'localhost';
-$dbname = 'library';
-$username = 'root';
-$password = 'mysql';
+$host = 'db';
+$dbname = 'evaluation_librairie';
+$username = 'app_user';
+$password = 'app_password';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

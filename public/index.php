@@ -4,24 +4,24 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: ../src/login.php');
     exit();
 }
 
-include("config.php");
-include("header.php");
+include("../src/config.php");
+include("../src/header.php");
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 if ($page === 'login') {
     echo "Avant inclusion du login.php"; // Débogage
-    include("login.php");
+    include("../src/login.php");
     echo "Après inclusion du login.php"; // Débogage
 } elseif ($page === 'books') {
-    include("books.php");
+    include("../src/books.php");
 } else {
-    include("home.php");
+    include("../src/home.php");
 }
 
-include("footer.php");
+include("../src/footer.php");
 ?>

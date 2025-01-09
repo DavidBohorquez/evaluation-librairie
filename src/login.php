@@ -1,6 +1,9 @@
 <?php
 require('config.php');
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -14,12 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($user && password_verify($password, $user['mot_de_passe'])) {
         // Mot de passe correct, connecter l'utilisateur
-        session_start();
         $_SESSION['user'] = $email;
         $_SESSION['prenom'] = $user['prenom'];
         $_SESSION['role'] = $user['role'];
         $_SESSION['user_id'] = $user['id'];
-        header('Location: index.php'); // Rediriger vers la page d'accueil
+        header('Location: ../public/index.php'); // Rediriger vers la page d'accueil
+        exit();
     } else {
         $error = "Email ou mot de passe incorrect";
     }
