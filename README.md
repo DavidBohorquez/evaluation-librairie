@@ -42,5 +42,5 @@ azerty
 OU 
 
 Rôle utilisateur : 
-marc@lord.com
+marc@lord.com 
 password
