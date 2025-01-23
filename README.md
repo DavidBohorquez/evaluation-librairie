@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# evaluation-librairie
-=======
 # evaluation-librairie
 
 **README - Initialisation du Projet en Local**
@@ -46,6 +43,4 @@ OU
 
 Rôle utilisateur : 
 marc@lord.com
-azerty                        
-  
->>>>>>> recover-branch
+password
