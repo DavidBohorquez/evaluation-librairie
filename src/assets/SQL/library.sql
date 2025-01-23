@@ -12,8 +12,8 @@ CREATE TABLE `utilisateurs` (
 
 -- Déchargement des données de la table `utilisateurs`
 INSERT INTO `utilisateurs` (`nom`, `prenom`, `email`, `mot_de_passe`, `role`) VALUES
-('Admin', 'User', 'admin@example.com', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHeFupf8X0Zc5a5x1E4y5Z5G5G5G5G5G5G', 'admin'),
-('John', 'Doe', 'john.doe@example.com', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHeFupf8X0Zc5a5x1E4y5Z5G5G5G5G5G5G', 'utilisateur');
+('Admin', 'User', 'john@smith.com', '$2y$10$NtF5vd8V4JnqLdpTKRVZa.4UT8mQ.xe2.G96h3nzdv87WJ6W0yVCa', 'admin'),
+('John', 'Doe', 'marc@lord.com', '$$2y$10$dvwo33oFFZUeTGHvPakiIOnVsms9qVZ21bcttQFCJRFGWm5yRbRlS', 'utilisateur');
 
 -- Structure de la table `livres`
 CREATE TABLE `livres` (

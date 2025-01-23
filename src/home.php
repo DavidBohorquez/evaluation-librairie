@@ -32,9 +32,9 @@ $resultTotalUsers = $stmtTotalUsers->fetch(PDO::FETCH_ASSOC);
     <ul>
         <?php if (isset($_SESSION['user'])) : ?>
             <li>Bonjour <?= $_SESSION['prenom']; ?></li>
-            <li><a href="books.php">Voir la liste des livres</a></li>
-            <li><a href="profile.php">Mon profil</a></li>
-            <li><a href="logout.php">Deconnexion</a></li>
+            <li><a href="../src/books.php">Voir la liste des livres</a></li>
+            <li><a href="../src/profile.php">Mon profil</a></li>
+            <li><a href="../src/logout.php">Deconnexion</a></li>
         <?php else : ?>
             <li><a href="login.php">Connexion</a></li>
             <li><a href="register.php">Inscription</a></li>

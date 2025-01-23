@@ -15,25 +15,21 @@ $query = "SELECT * FROM utilisateurs WHERE id = :user_id";
 $stmt = $pdo->prepare($query);
 $stmt->execute(array(':user_id' => $user_id));
 $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Profil de l'Utilisateur</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../src/assets/css/style.css">
 </head>
 <body>
 <header>
-        <h1>Mon profil - Librairie XYZ</h1>
-    </header>
-    <p>Nom : <?php echo $userInfo['nom']; ?></p>
-    <p>Email : <?php echo $userInfo['email']; ?></p>
-    <!-- Affichez d'autres informations du profil ici -->
-    <button onclick="window.location.href ='edit_profile.php'">Modifier le Profil</button>
-    <button onclick="window.location.href ='index.php'">Retour à l'accueil</button>
-
+    <h1>Mon profil - Librairie XYZ</h1>
+</header>
+<p>Nom : <?php echo htmlspecialchars($userInfo['nom'], ENT_QUOTES, 'UTF-8'); ?></p>
+<p>Email : <?php echo htmlspecialchars($userInfo['email'], ENT_QUOTES, 'UTF-8'); ?></p>
+<!-- Affichez d'autres informations du profil ici -->
+<button onclick="window.location.href ='edit_profile.php'">Modifier le Profil</button>
+<button onclick="window.location.href ='../public/index.php'">Retour à l'accueil</button>
 </body>
 </html>

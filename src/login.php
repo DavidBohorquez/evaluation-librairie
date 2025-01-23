@@ -1,9 +1,10 @@
 <?php
-require('config.php');
-
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+# echo __DIR__ . ; output: /var/www/html/src
+require(__DIR__. '/config.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -21,7 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['prenom'] = $user['prenom'];
         $_SESSION['role'] = $user['role'];
         $_SESSION['user_id'] = $user['id'];
-        header('Location: ../public/index.php'); // Rediriger vers la page d'accueil
+        
+        header('Location: ../index.php'); // Rediriger vers la page d'accueil
         exit();
     } else {
         $error = "Email ou mot de passe incorrect";
